@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const About = () => {
   return (
@@ -7,6 +7,6 @@ const About = () => {
       <p>app to search users from gitHub</p>
       <p>version 1.0.0</p>
     </div>
-  )
-}
-export default About
+  );
+};
+export default About;
