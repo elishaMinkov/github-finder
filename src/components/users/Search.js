@@ -1,12 +1,14 @@
 import React, { useState, useContext } from 'react';
-import PropTypes from 'prop-types';
 import Ghcontext from '../../context/github/githubContext';
+import Alertcontext from '../../context/alert/alertContext';
 
-const Search = ({ setAlert }) => {
+const Search = () => {
   const githubContext = useContext(Ghcontext);
+  const alertContext = useContext(Alertcontext);
   const [text, setText] = useState('');
 
   const onChange = (e) => setText(e.target.value);
+  const { setAlert } = alertContext;
 
   const onSubmit = (e) => {
     console.log('onSubmit triggedred');
@@ -42,9 +44,6 @@ const Search = ({ setAlert }) => {
       </form>
     </div>
   );
-};
-Search.propTypes = {
-  setAlert: PropTypes.func.isRequired
 };
 
 export default Search;
