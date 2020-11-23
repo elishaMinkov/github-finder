@@ -22,11 +22,9 @@ const Users = () => {
 };
 
 const userStyle = {
-  display: 'flex',
-  flexWrap: 'warp',
-  flexDirection: 'row',
-  alignItems:'center'
- 
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, 1fr)',
+  gridGap: '1rem'
 };
 
 export default Users;
